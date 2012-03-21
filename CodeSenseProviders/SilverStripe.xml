@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense>
+	<provider>
+		<selector>control.ss</selector>
+		<complete-match>[a-zA-Z0-9_]*</complete-match>
+		<completions>com.lukereative.ss.controls</completions>
+		<completions>com.lukereative.ss.variable-controls</completions>
+	</provider>
+	<provider>
+		<selector>variable.ss</selector>
+		<complete-match>[a-zA-Z0-9]*</complete-match>
+		<completions>com.lukereative.ss.variables</completions>
+	</provider>
+</codesense>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+	<set name="com.lukereative.ss.controls">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+				<transform-into>(?1::$1 %>$0)</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="AbsoluteLink" />
+		<completion string="ATT_val" />
+		<completion string="BaseHref" />
+		<completion string="CMSTreeClasses" />
+		<completion string="Comments" />
+		<completion string="ContentSource" />
+		<completion string="CurrentMember" />
+		<completion string="CurrentPage" />
+		<completion string="Debug" />
+		<completion string="ElementName" />
+		<completion string="Even" />
+		<completion string="EvenOdd" />
+		<completion string="First" />
+		<completion string="FirstLast" />
+		<completion string="JS_val" />
+		<completion string="Last" />
+		<completion string="Link" />
+		<completion string="LinkingMode" />
+		<completion string="LinkOrCurrent" />
+		<completion string="LinkOrSection" />
+		<completion string="LinkTo" />
+		<completion string="LoginForm" />
+		<completion string="MetaTags" />
+		<completion string="Middle" />
+		<completion string="MiddleString" />
+		<completion string="MultipleParents" />
+		<completion string="NestedTitle" />
+		<completion string="NexPageLink" />
+		<completion string="Now" />
+		<completion string="Odd" />
+		<completion string="PageComments" />
+		<completion string="PastMember" />
+		<completion string="PastVisitor" />
+		<completion string="Pos" />
+		<completion string="RAW_val" />
+		<completion string="RelativeLink" />
+		<completion string="Section2" />
+		<completion string="SilverStripeNavigator" />
+		<completion string="SQL_val" />
+		<completion string="Top" />
+		<completion string="TotalItems" />
+		<completion string="TreeTitle" />
+		<completion string="XML_val" />	
+	</set>
+	<set name="com.lukereative.ss.variable-controls">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+				<transform-into>(?1:($1\)$0:($1\) %>$0)</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="Breadcrumbs" />
+		<completion string="ChildrenOf" />
+		<completion string="InSection" />
+		<completion string="Level" />
+		<completion string="Menu" />
+		<completion string="Page" />
+	</set>
+	<set name="com.lukereative.ss.variables">
+		<completion string="AllNewsletters" />
+		<completion string="ClassName" />
+		<completion string="Content" />
+		<completion string="CopyContentFromID" />
+		<completion string="Created" />
+		<completion string="EmailOnSubmit" />
+		<completion string="EmailTo" />
+		<completion string="ErrorCode" />
+		<completion string="ExternalURL" />
+		<completion string="HasBrokenFile" />
+		<completion string="HasBrokenLink" />
+		<completion string="HomepageForDomain" />
+		<completion string="ID" />
+		<completion string="LastEdited" />
+		<completion string="LegacyURL" />
+		<completion string="LinkedPageID" />
+		<completion string="LinkToID" />
+		<completion string="MenuTitle" />
+		<completion string="MetaDescription" />
+		<completion string="MetaKeywords" />
+		<completion string="MetaTitle" />
+		<completion string="OnCompleteMessage" />
+		<completion string="ParentID" />
+		<completion string="ProvideComments" />
+		<completion string="RecordClassName" />
+		<completion string="RedirectionType" />
+		<completion string="ReportClass" />
+		<completion string="ShowInMenus" />
+		<completion string="ShowInSearch" />
+		<completion string="Sort" />
+		<completion string="Status" />
+		<completion string="Subject" />
+		<completion string="SubmitButtonText" />
+		<completion string="Subscribe" />
+		<completion string="Title" />
+		<completion string="URLSegment" />
+		<completion string="Version" />
+		<completion string="VersionID" />
+	</set>
+</codesense> 

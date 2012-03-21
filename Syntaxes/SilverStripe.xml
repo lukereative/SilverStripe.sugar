@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<syntax name="language-root.html.with-ss">
+	<zones>
+		<zone name="control.ss">
+			<starts-with>
+				<expression>(&lt;)(%)</expression>
+				<capture number="0" name="delimiter.control.start"/>
+		        <capture number="1" name="punctuation.bracket.angle.open" />
+		        <capture number="2" name="punctuation.delimiter.percentage" />
+			</starts-with>
+			<ends-with>
+				<expression>(%)(>)</expression>
+				<capture number="0" name="delimiter.control.end"/>
+				<capture number="1" name="punctuation.delimiter.percentage" />
+				<capture number="2" name="punctuation.bracket.angle.close" />
+			</ends-with>
+		</zone>
+		
+		<zone name="variable.ss">
+			<expression>(\$)([a-zA-Z0-9\.]+*)</expression>
+			<capture number="1" name="punctuation.dollar" />
+		</zone>
+		<include syntax="embedded.language-root.php" />
+		<include syntax="language-root.html" />
+	</zones>
+</syntax>

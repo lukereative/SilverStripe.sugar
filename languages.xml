@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<language id="com.lukereative.ss">
+		<name>SilverStripe</name>
+		<root-zone>language-root.html.with-ss</root-zone>
+		
+		 <detectors>
+		     <extension>ss</extension>
+		     <combo>
+		         <extension>ss</extension>
+		         <match-content lines="2"><![CDATA[(?i)<!DOCTYPE html]]></match-content>
+		     </combo>
+		     <combo>
+		         <extension>ss</extension>
+		         <match-content lines="1"><![CDATA[(?i)<html]]></match-content>
+		     </combo>
+		 </detectors>
+	</language>
+</settings>  
