@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codesense version="1.0">
+	<set name="com.lukereative.ss.conditions">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+				<transform-into>(?1: $1: $1 %>$0)</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="if" />
+		<completion string="else_if" />
+		<completion string="else">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+					<transform-into>(?1:: %>$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="end_if">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+					<transform-into>(?1:: %>$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	<set name="com.lukereative.ss.control">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+				<transform-into>(?1: $1: $1 %>$0)</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="control" />
+		<completion string="end_control">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+					<transform-into>(?1:: %>$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	<set name="com.lukereative.ss.methods">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+				<transform-into>(?1: $1: $1 %>$0)</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="require" />
+		<completion string="include" />
+	</set>
 	<set name="com.lukereative.ss.controls">
 		<behavior>
 			<append-dynamic>
@@ -51,11 +104,11 @@
 		<completion string="TreeTitle" />
 		<completion string="XML_val" />	
 	</set>
-	<set name="com.lukereative.ss.variable-controls">
+	<set name="com.lukereative.ss.controls-with-options">
 		<behavior>
 			<append-dynamic>
 				<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
-				<transform-into>(?1:($1\)$0:($1\) %>$0)</transform-into>
+				<transform-into>(?1:($1\):($1\) %>$0)</transform-into>
 			</append-dynamic>
 		</behavior>
 		<completion string="Breadcrumbs" />
@@ -64,6 +117,17 @@
 		<completion string="Level" />
 		<completion string="Menu" />
 		<completion string="Page" />
+	</set>
+	<set name="com.lukereative.ss.requirements">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+				<transform-into>(?1:($1\):($1\) %>$0)</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="css" />
+		<completion string="themedCSS" />
+		<completion string="javascript" />
 	</set>
 	<set name="com.lukereative.ss.variables">
 		<completion string="AllNewsletters" />

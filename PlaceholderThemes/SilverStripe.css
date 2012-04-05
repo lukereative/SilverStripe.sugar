@@ -3,23 +3,30 @@
     @placeholder ss
 */
 
-variable.ss{
-	color: hsl(194, 86%, 45%);
-	/* #48C5F2 */
+
+ss{
+	color: hsl(195, 86%, 45%);
 }
 
-variable.ss > punctuation.dollar{
-	color: hsl(195, 86%, 61%);
-}
-
-control.ss{
-	color:hsl(195, 86%, 45%);
-}
-
-control.ss > delimiter.control > bracket{
+ss delimiter.control > bracket{
 	color: hsl(195, 86%, 80%);
 }
 
-control.ss > delimiter.control > percentage{
-	color: hsl(195, 86%, 61%);
+ss keyword{
+	font-weight: bold;
+	color:hsl(195, 86%, 40%);
+}
+
+ss name{
+	font-weight: normal;
+	color: hsl(195, 86%, 45%);
+	/* #48C5F2 */
+}
+
+ss punctuation{
+	color: hsl(195, 86%, 60%);
+}
+
+ss parameter{
+	color: hsl(195, 86%, 30%);
 }
