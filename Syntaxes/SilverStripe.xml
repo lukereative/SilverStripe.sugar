@@ -41,6 +41,74 @@
 				<capture number="2" name="punctuation.bracket.angle.close" />
 			</ends-with>
 		</zone>
+		<!-- SilverStripe Control Statements -->
+		<zone name="loop.start.ss">
+			<starts-with>
+				<expression>((&lt;)(%))\s*(loop)</expression>
+				<capture number="1" name="delimiter.statement.start"/>
+		        <capture number="2" name="punctuation.bracket.angle.open" />
+		        <capture number="3" name="punctuation.delimiter.percentage" />
+		        <capture number="4" name="keyword.loop.start" />
+			</starts-with>
+			<ends-with>
+				<expression>(%)(>)</expression>
+				<capture number="0" name="delimiter.statement.end"/>
+				<capture number="1" name="punctuation.delimiter.percentage" />
+				<capture number="2" name="punctuation.bracket.angle.close" />
+			</ends-with>
+			<subzones>
+				<include collection="control.ss" />
+			</subzones>
+		</zone>
+		<zone name="loop.end.ss">
+			<starts-with>
+				<expression>((&lt;)(%))\s*(end_loop)</expression>
+				<capture number="1" name="delimiter.statement.start"/>
+			    <capture number="2" name="punctuation.bracket.angle.open" />
+			    <capture number="3" name="punctuation.delimiter.percentage" />
+			    <capture number="4" name="keyword.loop.end" />
+			</starts-with>
+			<ends-with>
+				<expression>(%)(>)</expression>
+				<capture number="0" name="delimiter.statement.end"/>
+				<capture number="1" name="punctuation.delimiter.percentage" />
+				<capture number="2" name="punctuation.bracket.angle.close" />
+			</ends-with>
+		</zone>
+		<!-- SilverStripe With Statements -->
+		<zone name="with.start.ss">
+			<starts-with>
+				<expression>((&lt;)(%))\s*(with)</expression>
+				<capture number="1" name="delimiter.statement.start"/>
+		        <capture number="2" name="punctuation.bracket.angle.open" />
+		        <capture number="3" name="punctuation.delimiter.percentage" />
+		        <capture number="4" name="keyword.with.start" />
+			</starts-with>
+			<ends-with>
+				<expression>(%)(>)</expression>
+				<capture number="0" name="delimiter.statement.end"/>
+				<capture number="1" name="punctuation.delimiter.percentage" />
+				<capture number="2" name="punctuation.bracket.angle.close" />
+			</ends-with>
+			<subzones>
+				<include collection="control.ss" />
+			</subzones>
+		</zone>
+		<zone name="with.end.ss">
+			<starts-with>
+				<expression>((&lt;)(%))\s*(end_with)</expression>
+				<capture number="1" name="delimiter.statement.start"/>
+			    <capture number="2" name="punctuation.bracket.angle.open" />
+			    <capture number="3" name="punctuation.delimiter.percentage" />
+			    <capture number="4" name="keyword.with.end" />
+			</starts-with>
+			<ends-with>
+				<expression>(%)(>)</expression>
+				<capture number="0" name="delimiter.statement.end"/>
+				<capture number="1" name="punctuation.delimiter.percentage" />
+				<capture number="2" name="punctuation.bracket.angle.close" />
+			</ends-with>
+		</zone>
 		<!-- SilverStripe Conditional Statements -->
 		<zone name="condition.start.ss">
 			<starts-with>

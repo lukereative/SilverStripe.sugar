@@ -30,11 +30,31 @@
 		<behavior>
 			<append-dynamic>
 				<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
-				<transform-into>(?1: $1: $1 %>$0)</transform-into>
+				<transform-into>(?1: $1: $1 %>
+$0
+&lt;% end_${completion} %>)</transform-into>
 			</append-dynamic>
 		</behavior>
 		<completion string="control" />
+		<completion string="loop" />
+		<completion string="with" />
 		<completion string="end_control">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+					<transform-into>(?1:: %>$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="end_loop">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
+					<transform-into>(?1:: %>$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="end_with">
 			<behavior>
 				<append-dynamic>
 					<matched-suffix>(\s*%>)|\s*[^%>]</matched-suffix>
